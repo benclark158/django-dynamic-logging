@@ -7,12 +7,12 @@ from django.dispatch.dispatcher import Signal
 
 logger = logging.getLogger(__name__)
 
-logging_changed = Signal(providing_args=['config'])
+logging_changed = Signal()
 """
 triggered when new logging config is added.
 """
 
-config_applied = Signal(providing_args=['config'])
+config_applied = Signal()
 """
 triggered each time a config is applied
 """

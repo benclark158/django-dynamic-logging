@@ -57,7 +57,7 @@ class JsonLoggerWidget(Textarea):
             '   $(function() {{'
             '       logging_widget($("#{anchorid}"), $("#{areaid}"), {extra});'
             '   }});'
-            '}}(jQuery));'
+            '}}(django.jQuery));'
             '</script>',
             anchorid=attrs.get('id', name) + '_display',
             areaid=attrs.get('id', name),

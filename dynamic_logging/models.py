@@ -12,8 +12,7 @@ from django.db import models
 from django.db.models import CASCADE
 from django.db.models.query_utils import Q
 from django.utils import timezone
-from django.utils.six import python_2_unicode_compatible
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext as _
 
 from dynamic_logging.signals import config_applied
 
@@ -38,8 +37,6 @@ class TriggerQueryset(models.QuerySet):
             (Q(end_date__gt=date) | Q(end_date__isnull=True))
         )
 
-
-@python_2_unicode_compatible
 class Trigger(models.Model):
     """
     represent the period of time a config should be effective.
@@ -96,8 +93,6 @@ def json_value(val):
             params={'value': val, 'error': str(e)},
         )
 
-
-@python_2_unicode_compatible
 class Config(models.Model):
     """
     the configuration for a whole logging config.

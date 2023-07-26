@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.db import models
 from django.template.defaultfilters import safe
 from django.urls.base import reverse
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from dynamic_logging.scheduler import main_scheduler
 from dynamic_logging.widgets import JsonLoggerWidget
