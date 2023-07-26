@@ -47,3 +47,7 @@ tr.logger_list > td:not(.new-item) {
     background-color: inherit;
     transition: all .5s ease-in-out;
 }
+
+#id_config_json_display, #id_config_json_display table {
+    width: 100%;
+}
